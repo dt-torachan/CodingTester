@@ -8,8 +8,10 @@
 </head>
 <body>
     @include("include.layout")
-    @foreach ($questions as $question)
-        @include("include.question",['question' => $question])
-    @endforeach
+    <div class="questions_blade">
+        @foreach ($questions as $question)
+            @include("include.question",['question' => $question])
+        @endforeach
+    </div>
 </body>
 </html>
