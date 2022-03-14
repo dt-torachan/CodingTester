@@ -17,3 +17,4 @@
 
 Route::get('/', 'Top@show');
 Route::get('/question', 'QuestionController@index');
+Route::get('/question/detail/{question_id}', 'QuestionDetailController@index');
