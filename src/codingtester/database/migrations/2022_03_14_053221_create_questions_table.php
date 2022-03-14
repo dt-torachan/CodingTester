@@ -17,7 +17,16 @@ class CreateQuestionsTable extends Migration
             $table->bigIncrements('question_id');
             $table->string('title');
             $table->string('lead');
-            $table->string('body');
+            $table->string('photo');
+            $table->string('prerequisites');
+            $table->string('input');
+            $table->string('output');
+            $table->string('conditions');
+            $table->string('input_example1');
+            $table->string('output_example2');
+            $table->string('output_example1');
+            $table->string('input_example2');
+            $table->string('remarks');
             $table->timestamps();
         });
     }
