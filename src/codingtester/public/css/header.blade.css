@@ -1,0 +1,8 @@
+.links a {
+    background-color: none;
+    transition: background-color ease-in 0.5s;
+}
+
+.links a:hover{
+    background-color: whitesmoke;
+}
