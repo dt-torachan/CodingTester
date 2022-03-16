@@ -1,3 +1,4 @@
+<script src="{{ asset('/js/ajax.js') }}"></script>
 <div class="answer_wrap">
     <div class="title_wrap mb15">
         <h3 class="h3_title">
@@ -37,7 +38,7 @@
                     </select>
                 </div>
                 <div class="compile-test-area__submit-button">
-                    <button name="button" type="submit" id="do_compile" onclick="compile_ang_test('/challenges/44/compile_and_test')" class="btn btn-primary m-r-5"><i class="fa fa-gear"></i>
+                    <button name="button" type="submit" id="do_compile" class="btn btn-primary m-r-5"><i class="fa fa-gear"></i>
                     提出前動作確認
                     </button>
                 </div>
