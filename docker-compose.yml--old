@@ -2,30 +2,13 @@ version: '3'
 services:
  # laravelを動かすコンテナ
  app:
+  #  ports:
+  #    - "80:80"
    build: ./docker/app
    container_name: app
-   environment:
-    - VIRTUAL_HOST=codingtester.local.jp
-    - LETSENCRYPT_HOST=codingtester.local.jp
    # コンテナとホスト側のディレクトリを同期する場所の指定。laravelのソースが入る予定の場所
    volumes:
      - ./src/codingtester:/var/www/html
-     - ./docker/nginx/certs/default.crt:/etc/apache2/default.crt
-     - ./docker/nginx/certs/default.key:/etc/apache2/default.key
-
- # APIサーバのコンテナ
- api:
-    build: ./docker/api
-    container_name: api
-    privileged: true
-    environment:
-      - VIRTUAL_HOST=api.codingtester.local.jp
-      - LETSENCRYPT_HOST=api.codingtester.local.jp
-    volumes:
-      - ./src/codechecker:/var/www/html
-      - ./docker/nginx/certs/default.crt:/etc/apache2/default.crt
-      - ./docker/nginx/certs/default.key:/etc/apache2/default.key
-
  # MySQLを動かすコンテナ
  db:
    image: mysql:5.7
@@ -33,6 +16,8 @@ services:
    environment:
      MYSQL_ROOT_PASSWORD: root
      MYSQL_DATABASE: laravel_db
+    #  MYSQL_USER: laravel_user
+    #  MYSQL_PASSWORD: laravel_pass
      TZ: 'Asia/Tokyo'
    # 起動時のコマンド
    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
@@ -40,18 +25,23 @@ services:
      - ./docker/db/data:/var/lib/mysql
      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
    ports:
-    - 3306:3306
-  
+     - 3306:3306
+ api:
+  build: ./docker/api/app
+  stdin_open: true
+  # ports:
+  #    - "81:80"
+  container_name: api
+  volumes:
+     - ./src/codechecker:/var/www/html
  smtp:
     image: schickling/mailcatcher
-    container_name: smtp
     ports:
       - "1080:1080"
       - "1025:1025"
 
  phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
     environment:
       - PMA_HOST=db
     links:
@@ -59,11 +49,10 @@ services:
     ports:
       - 8008:80
     volumes:
-      - ./docker/no/phpmyadmin/sessions:/sessions
+      - docker/no/phpmyadmin/sessions:/sessions
 
  nginx-proxy:
     image: jwilder/nginx-proxy
-    container_name: nginx
     labels:
       - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy=jwilder/nginx-proxy
     privileged: true
