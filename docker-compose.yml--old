@@ -6,9 +6,6 @@ services:
   #    - "80:80"
    build: ./docker/app
    container_name: app
-   environment:
-    # - DB_HOSTNAME=db
-    - VIRTUAL_HOST=codingtester.local.jp
    # コンテナとホスト側のディレクトリを同期する場所の指定。laravelのソースが入る予定の場所
    volumes:
      - ./src/codingtester:/var/www/html
@@ -28,20 +25,15 @@ services:
      - ./docker/db/data:/var/lib/mysql
      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
    ports:
-    - 3306:3306
-  
- # APIサーバのコンテナ
+     - 3306:3306
  api:
-    build: ./docker/api
-    privileged: true
-    environment:
-      # - DB_HOSTNAME=db
-      - VIRTUAL_HOST=api.codingtester.local.jp
-      # - LETSENCRYPT_EMAIL=e-mail@mail.com
-    volumes:
-      - ./src/codechecker:/var/www/html
-      - ./docker/httpd/php72.ini:/usr/local/etc/php/php.ini
-
+  build: ./docker/api/app
+  stdin_open: true
+  # ports:
+  #    - "81:80"
+  container_name: api
+  volumes:
+     - ./src/codechecker:/var/www/html
  smtp:
     image: schickling/mailcatcher
     ports:
@@ -57,7 +49,7 @@ services:
     ports:
       - 8008:80
     volumes:
-      - ./docker/no/phpmyadmin/sessions:/sessions
+      - docker/no/phpmyadmin/sessions:/sessions
 
  nginx-proxy:
     image: jwilder/nginx-proxy
