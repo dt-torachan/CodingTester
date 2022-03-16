@@ -37,5 +37,7 @@
             {!! $question->output_example2 !!}
         </div>
     </div>
+
+    @include("include.form.answer")
 </body>
 </html>
