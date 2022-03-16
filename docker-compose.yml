@@ -2,16 +2,30 @@ version: '3'
 services:
  # laravelを動かすコンテナ
  app:
-  #  ports:
-  #    - "80:80"
    build: ./docker/app
    container_name: app
    environment:
-    # - DB_HOSTNAME=db
     - VIRTUAL_HOST=codingtester.local.jp
+    - LETSENCRYPT_HOST=codingtester.local.jp
    # コンテナとホスト側のディレクトリを同期する場所の指定。laravelのソースが入る予定の場所
    volumes:
      - ./src/codingtester:/var/www/html
+     - ./docker/nginx/certs/default.crt:/etc/apache2/default.crt
+     - ./docker/nginx/certs/default.key:/etc/apache2/default.key
+
+ # APIサーバのコンテナ
+ api:
+    build: ./docker/api
+    container_name: api
+    privileged: true
+    environment:
+      - VIRTUAL_HOST=api.codingtester.local.jp
+      - LETSENCRYPT_HOST=api.codingtester.local.jp
+    volumes:
+      - ./src/codechecker:/var/www/html
+      - ./docker/nginx/certs/default.crt:/etc/apache2/default.crt
+      - ./docker/nginx/certs/default.key:/etc/apache2/default.key
+
  # MySQLを動かすコンテナ
  db:
    image: mysql:5.7
@@ -19,8 +33,6 @@ services:
    environment:
      MYSQL_ROOT_PASSWORD: root
      MYSQL_DATABASE: laravel_db
-    #  MYSQL_USER: laravel_user
-    #  MYSQL_PASSWORD: laravel_pass
      TZ: 'Asia/Tokyo'
    # 起動時のコマンド
    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
@@ -30,26 +42,16 @@ services:
    ports:
     - 3306:3306
   
- # APIサーバのコンテナ
- api:
-    build: ./docker/api
-    privileged: true
-    environment:
-      # - DB_HOSTNAME=db
-      - VIRTUAL_HOST=api.codingtester.local.jp
-      # - LETSENCRYPT_EMAIL=e-mail@mail.com
-    volumes:
-      - ./src/codechecker:/var/www/html
-      - ./docker/httpd/php72.ini:/usr/local/etc/php/php.ini
-
  smtp:
     image: schickling/mailcatcher
+    container_name: smtp
     ports:
       - "1080:1080"
       - "1025:1025"
 
  phpmyadmin:
     image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
     environment:
       - PMA_HOST=db
     links:
@@ -61,6 +63,7 @@ services:
 
  nginx-proxy:
     image: jwilder/nginx-proxy
+    container_name: nginx
     labels:
       - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy=jwilder/nginx-proxy
     privileged: true
