@@ -17,4 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('sample/{question_id}/{env}', 'Api\SampleController@index');
+Route::get('sample/{question_id}/{env}', 'Api\ResultController@index');
+Route::post('sample/{question_id}/{env}', 'Api\ResultController@index');
