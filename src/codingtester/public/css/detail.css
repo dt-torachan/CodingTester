@@ -1,0 +1,11 @@
+.detail_wrap {
+    width: 80%;
+    margin: 40px auto 10px auto;
+}
+.detail_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
