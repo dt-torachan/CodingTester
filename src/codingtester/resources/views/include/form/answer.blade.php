@@ -5,18 +5,18 @@
         解答欄
         </h3>
         <div class="answer_wrap_option">
-            <select class="box form-control" name="language[id]" id="language_id">
+            <select class="box form-control" id="language">
                 <option value="">使用する言語</option>
-                <option value="2300">Java</option>
-                <option value="2301">PHP</option>
-                <option value="2302">Ruby</option>
-                <option value="2321">Python3</option>
-                <option value="2305">C</option>
-                <option value="2306">C++</option>
-                <option value="2307">C#</option>
-                <option value="2308">JavaScript</option>
-                <option value="2311">Go</option>
-                <option value="2327">Rust(Beta)</option>
+                <option value="1">Java</option>
+                <option value="2">PHP</option>
+                <option value="3">Ruby</option>
+                <option value="4">Python3</option>
+                <option value="5">C</option>
+                <option value="6">C++</option>
+                <option value="7">C#</option>
+                <option value="8">JavaScript</option>
+                <option value="9">Go</option>
+                <option value="10">Rust(Beta)</option>
             </select>
         </div>
     </div>
