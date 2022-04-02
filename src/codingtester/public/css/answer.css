@@ -1,0 +1,27 @@
+.answer_wrap{
+    position: relative;
+    width: 80%;
+    margin: 50px auto 0 auto;
+    padding: 10px;
+    border: solid 3px #fff;
+    box-sizing: border-box;
+}
+
+.answer_wrap .h3_title{
+    position: absolute;
+    top: -60px;
+    left: 10;
+    padding: 5px 10px 0 10px;
+    border: solid 3px #fff;
+    border-bottom: solid 5px #ddd;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.answer_wrap div{
+    margin: 20px 0;
+}
+
+.compile-test-area{
+    text-align: right;
+}

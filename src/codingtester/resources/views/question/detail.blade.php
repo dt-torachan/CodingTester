@@ -8,8 +8,8 @@
 </head>
 <body>
     @include("include.layout")
-    <div>
-        <div>
+    <div class="detail_wrap">
+        <div class="detail_title">
             {!! $question->title !!}
         </div>
         <div>
