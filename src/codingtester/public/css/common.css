@@ -11,9 +11,13 @@ html, body {
     height: 100vh;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 .flex-center {
     align-items: center;
-    display: flex;
     justify-content: center;
 }
 
@@ -47,4 +51,31 @@ a {
 
 .m-b-md {
     margin-bottom: 30px;
+}
+
+ul{
+    list-style:none;
+    margin: 0 30px;
+}
+
+
+.btn-circle a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 4px 4px 0px #00000005;
+
+}
+
+
+
+.btn-circle i {
+    color: #B9C0CC;
+    font-size: 24px;
 }
