@@ -1,10 +1,10 @@
-@extends('layout.common')
+@extends('include.common')
 
 @section('title', 'TOP')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '説明文です')
 
-@include('layout.header')
+@include('include.header')
  
 {{-- content --}}
 @section('content')
@@ -23,4 +23,4 @@ faq
 
 @endsection
  
-@include('layout.footer')
+@include('include.footer')

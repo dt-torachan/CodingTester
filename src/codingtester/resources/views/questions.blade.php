@@ -1,4 +1,4 @@
-@extends('layout.common')
+@extends('include.common')
 
 @section('Questions', 'ページ')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
@@ -9,15 +9,15 @@
     <link href="{{ asset('css/questions.css') }}" rel="stylesheet" type="text/css">
 @endsection
  
-@include('layout.header')
+@include('include.header')
  
 {{-- content --}}
 @section('content')
     <div class="questions_blade">
         @foreach ($questions as $question)
-            @include("pages.include.question",['question' => $question])
+            @include("include.question",['question' => $question])
         @endforeach
     </div>
 @endsection
  
-@include('layout.footer')
+@include('include.footer')

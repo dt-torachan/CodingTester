@@ -1,4 +1,4 @@
-@extends('layout.common')
+@extends('include.common')
 
 @section('title', 'ページ')
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
@@ -10,7 +10,7 @@
     <link href="{{ asset('css/detail.css') }}" rel="stylesheet" type="text/css">
 @endsection
  
-@include('layout.header')
+@include('include.header')
  
 {{-- content --}}
 @section('content')
@@ -44,8 +44,8 @@
             {!! $question->output_example2 !!}
         </div>
     </div>
-@include("pages.include.answer")
+@include("include.answer")
 @endsection
 
  
-@include('layout.footer')
+@include('include.footer')
