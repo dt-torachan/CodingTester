@@ -5,8 +5,8 @@
             <img src="/photo/logo.png" alt="logo">
             <h1>CodingTester</h1>
         </div>
-        <div class="flex-row flex-center">
-            <ul class="links flex-row flex-center">
+        <div class="links flex-row flex-center">
+            <ul class="flex-row flex-center">
                 <li><a href="/">TOP</a></li>
                 <li><a href="/question">Questions</a></li>
                 <li><a href="/news">News</a></li>
