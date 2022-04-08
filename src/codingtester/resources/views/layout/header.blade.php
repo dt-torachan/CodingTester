@@ -1,3 +1,4 @@
+@section('header')
 <header>
     <div class="header flex-row">
         
@@ -16,3 +17,4 @@
         </div>
     </div>
 </header>
+@endsection

@@ -1,3 +1,4 @@
+@section('footer')
 <footer>
     <div class="footer flex-column flex-center">
         <div class="logo">
@@ -11,3 +12,4 @@
     </div>
 
 </footer>
+@endsection
