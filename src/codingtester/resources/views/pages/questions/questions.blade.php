@@ -7,8 +7,6 @@
 {{-- CSS --}}
 @section('pageCss')
     <link href="{{ asset('css/questions.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/answer.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/detail.css') }}" rel="stylesheet" type="text/css">
 @endsection
  
 @include('layout.header')
