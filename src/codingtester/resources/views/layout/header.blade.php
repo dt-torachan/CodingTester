@@ -2,7 +2,7 @@
 <header>
     <div class="header flex-row">
         
-        <div class="logo flex-row flex-center">
+        <div class="logo flex-row flex-center" onclick="location.href='/'">
             <img src="/photo/logo.png" alt="logo">
             <h1>CodingTester</h1>
         </div>
