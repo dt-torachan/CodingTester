@@ -1,12 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodintTester</title>
-</head>
-<body>
-    @include("include.layout")
-</body>
-</html>
+@extends('include.common')
+
+@section('title', 'TOP')
+@section('keywords', 'キーワード1,キーワード2,キーワード3')
+@section('description', '説明文です')
+
+@include('include.header')
+ 
+{{-- content --}}
+@section('content')
+<section class="hero">
+hero
+</section>
+<section class="questions">
+questions
+</section>
+<section class="news">
+news
+</section>
+<section class="faq">
+faq
+</section>
+
+@endsection
+ 
+@include('include.footer')
