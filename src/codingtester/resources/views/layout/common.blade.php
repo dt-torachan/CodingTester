@@ -8,12 +8,7 @@
     <meta name="description" itemprop="description" content="@yield('description')">
     <meta name="keywords" itemprop="keywords" content="@yield('keywords')">
 
-
-    <title>yield('title')|CodintTester</title>
-
-    <link href="{{ asset('css/questions.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/answer.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/detail.css') }}" rel="stylesheet" type="text/css">
+    <title>@yield('title')|CodintTester</title>
 
     @yield('pageCss')
 

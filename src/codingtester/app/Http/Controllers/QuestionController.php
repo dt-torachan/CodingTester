@@ -12,6 +12,6 @@ class QuestionController extends Controller
     public function index()
     {
         $questions = Question::get();
-        return view('pages/questions/questions', ['questions' => $questions]);
+        return view('pages.questions.questions', ['questions' => $questions]);
     }
 }

@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questions</title>
-</head>
-<body>
-    @include("include.layout")
+@extends('layout.common')
+
+@section('title', 'ページ')
+@section('keywords', 'キーワード1,キーワード2,キーワード3')
+@section('description', '説明文です')
+
+{{-- CSS --}}
+@section('pageCss')
+{{-- <link href="{{ asset('css/layout.css') }}" rel="stylesheet"> --}}
+@endsection
+ 
+@include('layout.header')
+ 
+{{-- content --}}
+@section('content')
+
     <div class="detail_wrap">
         <div class="detail_title">
             {!! $question->title !!}
@@ -37,7 +43,8 @@
             {!! $question->output_example2 !!}
         </div>
     </div>
+@include("pages.questions.answer")
+@endsection
 
-    @include("include.form.answer")
-</body>
-</html>
+ 
+@include('layout.footer')

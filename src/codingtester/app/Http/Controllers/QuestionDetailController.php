@@ -12,6 +12,6 @@ class QuestionDetailController extends Controller
     public function index($question_id)
     {
         $question = Question::find($question_id);
-        return view('question.detail', ['question' => $question]);
+        return view('pages.questions.detail', ['question' => $question]);
     }
 }

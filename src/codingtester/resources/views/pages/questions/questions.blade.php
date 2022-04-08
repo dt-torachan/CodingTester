@@ -1,7 +1,25 @@
+@extends('layout.common')
 
-    {{-- @include("include.layout") --}}
+@section('Questions', 'ページ')
+@section('keywords', 'キーワード1,キーワード2,キーワード3')
+@section('description', '説明文です')
+
+{{-- CSS --}}
+@section('pageCss')
+    <link href="{{ asset('css/questions.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/answer.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/detail.css') }}" rel="stylesheet" type="text/css">
+@endsection
+ 
+@include('layout.header')
+ 
+{{-- content --}}
+@section('content')
     <div class="questions_blade">
         @foreach ($questions as $question)
-            {{-- @include("question",['question' => $question]) --}}
+            @include("pages.questions.question",['question' => $question])
         @endforeach
     </div>
+@endsection
+ 
+@include('layout.footer')
