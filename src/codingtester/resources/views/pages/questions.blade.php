@@ -15,7 +15,7 @@
 @section('content')
     <div class="questions_blade">
         @foreach ($questions as $question)
-            @include("pages.questions.question",['question' => $question])
+            @include("pages.include.question",['question' => $question])
         @endforeach
     </div>
 @endsection
