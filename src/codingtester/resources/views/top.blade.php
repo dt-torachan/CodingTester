@@ -15,7 +15,7 @@
 @section('content')
 <section class="hero">
     <div class="section_wrap">
-        <div class="hero_content">
+        <div class="hero_content flex-column flex-center">
             <p class="hero_title">Welcome to</br>
             CodingTester</p>
             <div class="hero_text">
@@ -24,7 +24,7 @@
                 <p>プログラミングの</p>
             </div>
         </div>
-        <div class="registration">
+        <div class="registration flex-column flex-center">
             <p class="registration_text">今すぐ登録して</br>
             出題しよう！</p>
             <div class="registration_form">
