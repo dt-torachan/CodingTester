@@ -1,3 +1,4 @@
+/* hero */
 .hero{
     background-color: #F4F4F4;
     padding: 40px 0;
@@ -50,4 +51,48 @@
 
 .registration_form .btn{
     width: 100%;
+}
+
+/* questions */
+
+.questions_wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.questions_wrap .question{
+    width: 45%;
+    border: 1px solid #DADADA;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    align-items: stretch;
+}
+
+.questions_wrap img,
+.question_content{
+    width: 50%;
+}
+
+.question_text{
+    text-align: center;
+}
+
+.question_title{
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.question_description{
+    font-size: 0.8rem;
+}
+
+.question_content{
+    justify-content: space-between;
+}
+
+.question_btn{
+    width: 70%;
 }

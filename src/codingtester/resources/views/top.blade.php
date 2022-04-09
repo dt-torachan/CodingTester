@@ -42,15 +42,17 @@
     <div class="section_wrap">
         <h2>QUESTIONS</h2>
         <p>挑戦したい問題を見つけよう！</p>
-        <div class="questions_menu">
+        <div class="questions_tab">
         </div>
         <div class="questions_wrap">
-            <div class="question">
+            <div class="flex-row flex-center question">
                 <img src="photo/logo.png" alt="">
-                <div class="question_text">
-                    <p class="question_title">FizzBuzz</p>
-                    <p class="question_description">プログラミングの基礎！好きな言語で挑戦しよう</p>
-                    <div class="question_btn btn">問題を解く</div>
+                <div class="flex-column flex-center question_content">
+                    <div class="question_text">
+                        <p class="question_title">FizzBuzz</p>
+                        <p class="question_description">好きな言語で挑戦しよう</p>
+                    </div>
+                    <div class="btn question_btn">問題を解く</div>
                 </div>
             </div>
         </div>
