@@ -40,9 +40,9 @@
         <div class="question">
             <img src="photo/logo.png" alt="">
             <div class="question_text">
-                <p class="title">FizzBuzz</p>
-                <p class="description">プログラミングの基礎！好きな言語で挑戦しよう</p>
-                <div class="btn">問題を解く</div>
+                <p class="question_title">FizzBuzz</p>
+                <p class="question_description">プログラミングの基礎！好きな言語で挑戦しよう</p>
+                <div class="question_btn">問題を解く</div>
             </div>
         </div>
     </div>
