@@ -1,8 +1,8 @@
 html, body {
     background-color: #ffffff;
     color: #636b6f;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 200;
+    font-family: 'Yu Gothic';
+    font-weight: 400, Regular;
     height: 100vh;
     margin: 0;
 }
@@ -97,4 +97,19 @@ ul{
 .btn-circle i {
     color: #B9C0CC;
     font-size: 24px;
+}
+
+input{
+    background-color: #ffffff;
+}
+
+.btn{
+    background-color: #2D9BE7;
+    border-radius: 20px;
+    color: #FFFFFF;
+    width: 200px;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    cursor: pointer;
 }
