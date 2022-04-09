@@ -46,12 +46,33 @@
             </div>
         </div>
     </div>
+    <div class="btn">
+        <p>READ ALL</p>
+    </div>
 </section>
 <section class="news">
-news
+    <h2>NEWS</h2>
+    <div class="news_wrap">
+        <div class="news_block">
+            <p>問題を追加しました</p>
+            <div class="new_btn"></div>
+        </div>
+    </div>
+    <div class="btn">
+        <p>READ ALL</p>
+    </div>
 </section>
 <section class="faq">
-faq
+    <h2>FAQ</h2>
+    <div class="faq_wrap">
+        <div class="faq_block">
+            <p>回答できる言語は選択できますか？</p>
+            <p>選択できます。Python、、、などの言語を選択して回答いただけます。</p>
+        </div>
+    </div>
+    <div class="btn">
+        <p>READ ALL</p>
+    </div>
 </section>
 
 @endsection
