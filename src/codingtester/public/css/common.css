@@ -113,3 +113,9 @@ input{
     line-height: 2rem;
     cursor: pointer;
 }
+
+.section_wrap{
+    width: 80%;
+    max-width: 920px;
+    margin: 0 auto;
+}
