@@ -32,7 +32,20 @@
     </div>
 </section>
 <section class="questions">
-    
+    <h2>QUESTIONS</h2>
+    <p>挑戦したい問題を見つけよう！</p>
+    <div class="questions_menu">
+    </div>
+    <div class="questions_wrap">
+        <div class="question">
+            <img src="photo/logo.png" alt="">
+            <div class="question_text">
+                <p class="title">FizzBuzz</p>
+                <p class="description">プログラミングの基礎！好きな言語で挑戦しよう</p>
+                <div class="btn">問題を解く</div>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="news">
 news
