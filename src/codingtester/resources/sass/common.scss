@@ -1,7 +1,7 @@
 html, body {
   background-color: #ffffff;
   color: #636b6f;
-  font-family: "Yu Gothic";
+  font-family: 'Yu Gothic';
   font-weight: 400, Regular;
   height: 100vh;
   margin: 0;
@@ -63,7 +63,7 @@ a {
   padding: 0 25px;
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.1rem;
+  letter-spacing: .1rem;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -77,21 +77,24 @@ ul {
   padding: 0;
 }
 
-.btn-circle a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45px;
-  height: 45px;
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  margin: 0;
-  padding: 0;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0196078431);
-}
-.btn-circle i {
-  color: #B9C0CC;
-  font-size: 24px;
+.btn-circle {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 4px 4px 0px #00000005;
+  }
+
+  i {
+    color: #B9C0CC;
+    font-size: 24px;
+  }
 }
 
 input {
@@ -110,19 +113,22 @@ input {
 }
 
 .section_wrap {
+  .btn {
+    margin: 0 auto;
+  }
+
   width: 80%;
   max-width: 920px;
   margin: 0 auto;
-}
-.section_wrap .btn {
-  margin: 0 auto;
-}
-.section_wrap h2 {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 0;
-}
-.section_wrap h2 + p {
-  font-size: 0.8rem;
-  text-align: center;
+
+  h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0;
+
+    + p {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
 }

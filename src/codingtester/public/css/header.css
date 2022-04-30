@@ -1,35 +1,31 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #F4F4F4;
-    height: 64px;
-    color: #B9C0CC;
-    padding: 0 30px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F4F4F4;
+  height: 64px;
+  color: #B9C0CC;
+  padding: 0 30px;
+  box-shadow: 0px 1px 0px 0px #DADADA;
 }
 
-.logo:hover{
-    cursor: pointer
+.logo:hover {
+  cursor: pointer;
 }
-
-.logo img{
-    height: 30px;
+.logo img {
+  height: 30px;
 }
-
-.logo h1{
-    font-size: 1em;
+.logo h1 {
+  font-size: 1em;
 }
 
 .links ul {
-    margin: 0 30px;
+  margin: 0 30px;
 }
-
 .links ul a {
-    color: #B9C0CC;
-    background-color: none;
-    transition: background-color ease-in 0.5s;
+  color: #B9C0CC;
+  background-color: none;
+  transition: background-color ease-in 0.5s;
 }
-
-.links ul a:hover{
-    background-color: rgb(121, 121, 121);
+.links ul a:hover {
+  background-color: rgb(121, 121, 121);
 }
-

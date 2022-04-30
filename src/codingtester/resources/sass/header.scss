@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F4F4F4;
+  height: 64px;
+  color: #B9C0CC;
+  padding: 0 30px;
+  box-shadow: 0px 1px 0px 0px #DADADA;
+}
+
+.logo {
+  &:hover {
+    cursor: pointer;
+  }
+
+  img {
+    height: 30px;
+  }
+
+  h1 {
+    font-size: 1em;
+  }
+}
+
+.links ul {
+  margin: 0 30px;
+
+  a {
+    color: #B9C0CC;
+    background-color: none;
+    transition: background-color ease-in 0.5s;
+
+    &:hover {
+      background-color: rgb(121, 121, 121);
+    }
+  }
+}

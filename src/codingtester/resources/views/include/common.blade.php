@@ -11,7 +11,7 @@
     <title>@yield('title')|CodintTester</title>
 
 
-
+    <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('css/common.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet" type="text/css">

@@ -1,3 +1,17 @@
-.footer{
-    background-color: #F4F4F4;
+.footer {
+  background-color: #F4F4F4;
+  padding: 20px;
+}
+
+.sns a {
+  padding: 0;
+  margin: 0 10px;
+}
+.sns i {
+  color: #B9C0CC;
+  font-size: 24px;
+}
+
+small {
+  color: #686868;
 }
