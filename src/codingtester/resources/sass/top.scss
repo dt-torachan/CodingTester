@@ -1,12 +1,14 @@
 /* hero */
+
 .hero {
   background-color: #F4F4F4;
   padding: 40px 0;
-}
-.hero .section_wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+
+  .section_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .hero_content, .registration {
@@ -36,34 +38,41 @@
   text-align: center;
 }
 
-.registration_form input, .registration_form button {
-  margin: 10px 0;
-  height: 2.5rem;
-}
-.registration_form input {
-  border-radius: 20px;
-}
-.registration_form .btn {
-  width: 100%;
+.registration_form {
+  input, button {
+    margin: 10px 0;
+    height: 2.5rem;
+  }
+
+  input {
+    border-radius: 20px;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
 
 /* questions */
+
 .questions_wrap {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.questions_wrap .question {
-  width: 45%;
-  border: 1px solid #DADADA;
-  box-sizing: border-box;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 20px;
-  align-items: stretch;
-}
-.questions_wrap img {
-  width: 50%;
+
+  .question {
+    width: 45%;
+    border: 1px solid #DADADA;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    align-items: stretch;
+  }
+
+  img {
+    width: 50%;
+  }
 }
 
 .question_content {

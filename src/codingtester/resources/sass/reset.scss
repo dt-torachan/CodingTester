@@ -12,11 +12,12 @@ input {
   padding: 0.4em 0.8em;
   width: 100%;
   box-sizing: border-box;
-}
-input:focus {
-  border: 1px solid rgba(0, 0, 0, 0.32);
-  box-shadow: none;
-  outline: none;
+
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+  }
 }
 
 textarea {
@@ -33,18 +34,19 @@ textarea {
   height: 100px;
   padding: 0.4em 0.8em;
   width: 100%;
-}
-textarea :focus {
-  border: 1px solid rgba(0, 0, 0, 0.32);
-  box-shadow: none;
-  outline: none;
+
+  :focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+  }
 }
 
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background: transparent url(https://haniwaman.com/cms/wp-content/uploads/2018/12/form-css-arrow.png) no-repeat center right 8px/16px 16px;
+  background: transparent url(https://haniwaman.com/cms/wp-content/uploads/2018/12/form-css-arrow.png) no-repeat center right 8px / 16px 16px;
   border: 1px solid rgba(0, 0, 0, 0.16);
   border-radius: 0;
   color: inherit;
@@ -53,14 +55,16 @@ select {
   font-size: 1em;
   padding: 0.4em 0.8em;
   width: 100%;
-}
-select::-ms-expand {
-  display: none;
-}
-select:focus {
-  border: 1px solid rgba(0, 0, 0, 0.32);
-  box-shadow: none;
-  outline: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+  }
 }
 
 button {
@@ -76,11 +80,13 @@ button {
   margin: 0;
   padding: 0;
   text-decoration: none;
-}
-button:hover, button:focus {
-  outline: none;
-}
-button::-moz-foucus-inner {
-  border: none;
-  padding: 0;
+
+  &:hover, &:focus {
+    outline: none;
+  }
+
+  &::-moz-foucus-inner {
+    border: none;
+    padding: 0;
+  }
 }
