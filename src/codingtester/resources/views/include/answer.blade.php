@@ -8,14 +8,14 @@
             <select class="box form-control" id="language">
                 <option value="">使用する言語</option>
                 <option value="1">Java</option>
-                <option value="2">PHP</option>
-                <option value="3">Ruby</option>
-                <option value="4">Python3</option>
-                <option value="5">C</option>
-                <option value="6">C++</option>
-                <option value="7">C#</option>
-                <option value="8">JavaScript</option>
-                <option value="9">Go</option>
+                <option value="2">PHP(Beta)</option>
+                <option value="3">Ruby(Beta)</option>
+                <option value="4">Python3(Beta)</option>
+                <option value="5">C(Beta)</option>
+                <option value="6">C++(Beta)</option>
+                <option value="7">C#(Beta)</option>
+                <option value="8">JavaScript(Beta)</option>
+                <option value="9">Go(Beta)</option>
                 <option value="10">Rust(Beta)</option>
             </select>
         </div>
@@ -32,9 +32,8 @@
                 <div class="compile-test-area__input-select">
                     <label for="sample_input_no">動作確認で使うテストケースを選択</label>
                     <select name="sample_input_no" id="sample_input_no" class="select box">
-                        <option value="0">入力例1</option>
-                        <option value="1">入力例2</option>
-                        <option value="2">入力例3</option>
+                        <option value="1">入力例1</option>
+                        <option value="2">入力例2</option>
                     </select>
                 </div>
                 <div class="compile-test-area__submit-button">
