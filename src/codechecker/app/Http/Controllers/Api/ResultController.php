@@ -14,7 +14,7 @@ class ResultController extends Controller
 
         $result = $codeexecutor->run($data);
         
-        if ($question_id <= 1) {
+        if ($question_id >= 1) {
             return response()->json([
                 'code'     => 200,
                 'question_id' => $question_id,
