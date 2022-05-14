@@ -99,7 +99,7 @@ input {
 }
 
 .btn {
-  background-color: #2D9BE7;
+  background-color: #254B66;
   border-radius: 20px;
   color: #FFFFFF;
   width: 200px;
@@ -109,10 +109,15 @@ input {
   cursor: pointer;
 }
 
+section:nth-child(2n+1) {
+  background-color: #F4F4F4;
+}
+
 .section_wrap {
   width: 80%;
   max-width: 920px;
   margin: 0 auto;
+  padding: 40px 0;
 }
 .section_wrap .btn {
   margin: 0 auto;

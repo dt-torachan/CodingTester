@@ -1,3 +1,5 @@
+@import "_colors.scss";
+
 html, body {
   background-color: #ffffff;
   color: #636b6f;
@@ -25,6 +27,7 @@ body {
   height: 100vh;
 }
 
+// flex
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -77,6 +80,7 @@ ul {
   padding: 0;
 }
 
+// 丸型ボタン
 .btn-circle {
   a {
     display: flex;
@@ -102,9 +106,9 @@ input {
 }
 
 .btn {
-  background-color: #2D9BE7;
+  background-color: $btn-background-color;
   border-radius: 20px;
-  color: #FFFFFF;
+  color: $btn-color;
   width: 200px;
   height: 2rem;
   text-align: center;
@@ -112,14 +116,19 @@ input {
   cursor: pointer;
 }
 
-.section_wrap {
-  .btn {
-    margin: 0 auto;
-  }
+section:nth-child(2n+1){
+  background-color: $background-color-sub;
+}
 
+.section_wrap {
   width: 80%;
   max-width: 920px;
   margin: 0 auto;
+  padding: 40px 0;
+
+  .btn {
+    margin: 0 auto;
+  }
 
   h2 {
     font-size: 2.2rem;
